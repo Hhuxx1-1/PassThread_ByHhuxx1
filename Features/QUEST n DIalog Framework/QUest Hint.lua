@@ -10,10 +10,8 @@ local function getAngleDiff(playerid, target)
     local mag2 = math.sqrt(carX^2 + carZ^2);
     carX, carZ = carX / mag2, carZ / mag2 
     local dot, det = carX * dirX1 + carZ * dirZ1, carX * dirZ1 - carZ * dirX1
-    -- Chat:sendSystemMsg("Car X :"..carX);
-    -- Chat:sendSystemMsg("Car Z :"..carZ);
+
     return math.atan2(det, dot) * (180 / math.pi)
-    -- you know that you should compare car facing direction and player facing direction 
 end
 
 local isCreated = {};
